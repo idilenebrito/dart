@@ -15,5 +15,12 @@ void main(List<String> args) {
   student.grades3 = double.parse(stdin.readLineSync() ?? "0.0");
 
   print("\n");
-  student.status();
+  print("FINAL GARDE = ${student.finalGrades()}");
+
+  if (student.finalGrades() < 60) {
+    print("FAILED");
+    print(student.notaRestante());
+  } else {
+    print("PASS");
+  }
 }

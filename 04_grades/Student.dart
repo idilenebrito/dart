@@ -6,15 +6,13 @@ class Student {
 
   Student(this.name, this.grades1, this.grades2, this.grades3);
 
-  void status() {
-    double grades = grades1 + grades2 + grades3;
-    print("FINAL GRADE = $grades");
-    if (grades < 60) {   
-      print("FAILED");
-      double rest = 60 - grades;
-      print("MISSING $rest POINTS");
+  double finalGrades() => grades1 + grades2 + grades3;
+
+  double notaRestante() {
+    if (finalGrades() < 60) {
+      return (60 - finalGrades());
     } else {
-      print("PASS");
+      return 0.0;
     }
   }
 }
