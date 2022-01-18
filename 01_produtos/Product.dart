@@ -14,7 +14,7 @@ class Product {
 
   @override
   String toString() {
-    return  "${name}, \$${price.toStringAsFixed(2)}, ${quantity} units, Total: \$${totalValueInStock().toStringAsFixed(2)}";;
+    return  "${name}, \$${price.toStringAsFixed(2)}, ${quantity} units, Total: \$${totalValueInStock().toStringAsFixed(2)}";
   }
 
 }
